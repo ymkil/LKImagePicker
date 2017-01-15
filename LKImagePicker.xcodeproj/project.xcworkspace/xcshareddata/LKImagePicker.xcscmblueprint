@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B95DDD96DBA0E8A05A2C2954609D27B284363C28",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "20C1FC6DDBEA189D0B958B478685D295783F1E09" : 9223372036854775807,
+    "B95DDD96DBA0E8A05A2C2954609D27B284363C28" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "00CD9944-A3D7-43BC-969E-F8418B7846D1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "20C1FC6DDBEA189D0B958B478685D295783F1E09" : "",
+    "B95DDD96DBA0E8A05A2C2954609D27B284363C28" : "LKImagePicker_github\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LKImagePicker",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LKImagePicker.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ymkil\/MKDictModel.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "20C1FC6DDBEA189D0B958B478685D295783F1E09"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ymkil\/LKImagePicker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B95DDD96DBA0E8A05A2C2954609D27B284363C28"
+    }
+  ]
+}
