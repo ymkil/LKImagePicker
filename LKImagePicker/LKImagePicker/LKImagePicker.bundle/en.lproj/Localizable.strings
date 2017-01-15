@@ -1,0 +1,22 @@
+"OK" = "OK";
+"Back" = "Back";
+"Done" = "Done";
+"Sorry" = "Sorry";
+"Cancel" = "Cancel";
+"Setting" = "Setting";
+"Photos" = "Photos";
+"Videos" = "Videos";
+"Preview" = "Preview";
+"Full image" = "Full image";
+"Processing..." = "Processing...";
+"Synchronizing photos from iCloud" = "Synchronizing photos from iCloud";
+"Can not use camera" = "Can not use camera";
+"Can not choose both video and photo" = "Can not choose both video and photo";
+"Can not choose both photo and GIF" = "Can not choose both photo and GIF";
+"Select the video when in multi state, we will handle the video as a photo" = "Select the video when in multi state, we will handle the video as a photo";
+"Can not jump to the privacy settings page, please go to the settings page by self, thank you" = "Can not jump to the privacy settings page, please go to the settings page by self, thank you";
+
+"Select a maximum of %zd photos" = "Select a maximum of %zd photos";
+"Select a minimum of %zd photos" = "Select a minimum of %zd photos";
+"Allow %@ to access your album in \"Settings -> Privacy -> Photos\"" = "Allow %@ to access your album in \"Settings -> Privacy -> Photos\"";
+"Please allow %@ to access your camera in \"Settings -> Privacy -> Camera\"" = "Please allow %@ to access your camera in \"Settings -> Privacy -> Camera\"";
