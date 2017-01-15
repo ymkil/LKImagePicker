@@ -9,6 +9,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/ymkil/LKImagePicker.git", :tag => "0.1.2" }
   s.requires_arc = true
-  s.resources    = "LKImagePicker/LKImagePicker/Resource/*.{png,xib,nib}"
-  s.source_files = "LKImagePicker/LKImagePicker/*.{swift,plist}"
+  s.source_files = "LKImagePicker/LKImagePicker/*"
 end
