@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LKImagePicker'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'An image selector'
  
   s.description      = <<-DESC
@@ -11,8 +11,8 @@ A clone of UIImagePickerController, support picking multiple photos、original p
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '<Mkil>' => '<w3cylk@163.com>' }
   s.source           = { :git => 'https://github.com/ymkil/LKImagePicker.git', :tag => s.version.to_s }
- 
-  s.ios.deployment_target = '8.0'
+  
+  s.platform = :ios, '8.0'
   s.source_files = 'LKImagePicker/LKImagePicker/*'
  
 end
