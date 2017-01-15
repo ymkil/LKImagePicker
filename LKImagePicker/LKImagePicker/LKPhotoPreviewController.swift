@@ -302,8 +302,7 @@ public class LKPhotoPreviewController: UIViewController,UICollectionViewDelegate
     }
     
     func getSelectedPhotoBytes() {
-        let lkImagePickerVC = navigationController as! LKImagePickerController
-        AssetManager.getPhotosBytesWithArray(lkImagePickerVC.selectedModels) {
+        AssetManager.getPhotosBytesWithArray([models![currentIndex]]) {
             (totalBytes) in
             self.originalPhotoLable.text = "(\(totalBytes))"
         }
