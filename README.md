@@ -10,8 +10,8 @@ A multi-select, select the original image and video picture selector, while prev
 
 ## 一. Installation 安装
 
-  * CocoaPods：pod 'LKImagePicker'
-  * 手动导入：将LKImagePicker文件夹拽入项目中，导入头文件：import LKImagePicker
+  * CocoaPods：pod 'LKImagePicker'，导入模块：import LKImagePicker
+  * 手动导入：将LKImagePicker文件夹拽入项目中
 
 ## 二. Example 例子
 
