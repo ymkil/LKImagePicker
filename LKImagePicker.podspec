@@ -3,7 +3,6 @@ Pod::Spec.new do |s|
   s.version      = '1.0.0'
   s.summary      = 'A clone of TZImagePickerController, support picking multiple photos、original photo and video'
   s.homepage     = 'https://github.com/ymkil/LKImagePicker'
-  s.social_media_url = 'www.mkiltech.com'
   s.license      = 'MIT'
   s.author       = { 'Mkil' => 'w3cylk@163.com' }
   s.platform     = :ios
