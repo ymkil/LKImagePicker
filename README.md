@@ -14,7 +14,7 @@ A multi-select, select the original image and video picture selector, while prev
   * 手动导入：将LKImagePicker文件夹拽入项目中
 
 ## 二. Example 例子
-
+``` swift
 // MARK: 这些参数都可以不传，此时会走默认设置, 也可以通过代理回调
 let imagePickerVC =  LKImagePickerController(maxImagesCount: 9, columnNumber: 4, delegate: self, true) {
     (images, assets, isSelectOriginalPhoto) in
@@ -22,7 +22,7 @@ let imagePickerVC =  LKImagePickerController(maxImagesCount: 9, columnNumber: 4,
 }
 
 self.present(imagePickerVC, animated: true, completion: nil)
-  ```
+``` swift
 ## 三. Requirements 要求
    iOS 8 or later. Requires ARC  
    iOS8及以上系统可使用. ARC环境.
