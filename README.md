@@ -22,7 +22,7 @@ let imagePickerVC =  LKImagePickerController(maxImagesCount: 9, columnNumber: 4,
 }
 
 self.present(imagePickerVC, animated: true, completion: nil)
-``` swift
+```
 ## 三. Requirements 要求
    iOS 8 or later. Requires ARC  
    iOS8及以上系统可使用. ARC环境.
