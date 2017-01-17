@@ -291,6 +291,8 @@ public class LKPhotoPreviewController: UIViewController,UICollectionViewDelegate
     }
     
     func originalPhotoButtonClick() {
+        let lkImagePickerVC = navigationController as! LKImagePickerController
+        if lkImagePickerVC.selectedModels.count <= 0 { return }
         originalPhotoButton.isSelected = !originalPhotoButton.isSelected
         isSelectOriginalPhoto = originalPhotoButton.isSelected
         originalPhotoLable.isHidden = !originalPhotoButton.isSelected
