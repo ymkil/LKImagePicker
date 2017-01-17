@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LKImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LKImagePickerExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -38,13 +38,36 @@
                                                 <rect key="frame" x="225" y="2" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <action selector="showInsideTakePhoto:" destination="BYZ-38-t0r" eventType="valueChanged" id="w29-Fc-ZTz"/>
+                                                    <action selector="showInsideTakePhoto:" destination="BYZ-38-t0r" eventType="valueChanged" id="pnD-nN-HCu"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Cy3-y6-0gp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUz-B3-OYi" userLabel="View2">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="照片按修改时间升序排列" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi4-6G-2c6">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFn-8J-x48">
+                                                <rect key="frame" x="225" y="2" width="51" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="timeSort:" destination="BYZ-38-t0r" eventType="valueChanged" id="FTS-it-aB3"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="z8y-eb-279"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myS-3w-TEI" userLabel="View3">
@@ -61,7 +84,7 @@
                                                 <rect key="frame" x="225" y="2" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <action selector="selectedVideo:" destination="BYZ-38-t0r" eventType="valueChanged" id="6cd-sc-q8e"/>
+                                                    <action selector="selectedVideo:" destination="BYZ-38-t0r" eventType="valueChanged" id="4GS-8J-yel"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -84,7 +107,7 @@
                                                 <rect key="frame" x="225" y="2" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <action selector="selectedPhoto:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ukt-yJ-dkP"/>
+                                                    <action selector="selectedPhoto:" destination="BYZ-38-t0r" eventType="valueChanged" id="XoS-Es-c7d"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -107,7 +130,7 @@
                                                 <rect key="frame" x="225" y="2" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <action selector="selectedOriginalPhoto:" destination="BYZ-38-t0r" eventType="valueChanged" id="2cj-8K-ygD"/>
+                                                    <action selector="selectedOriginalPhoto:" destination="BYZ-38-t0r" eventType="valueChanged" id="jP8-gj-cIu"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -162,29 +185,6 @@
                                             <constraint firstAttribute="height" constant="35" id="nDp-hG-6jS"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUz-B3-OYi" userLabel="View2">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="35"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="照片按修改时间升序排列" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi4-6G-2c6">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFn-8J-x48">
-                                                <rect key="frame" x="225" y="2" width="51" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="timeSort:" destination="BYZ-38-t0r" eventType="valueChanged" id="bVz-3t-P2E"/>
-                                                </connections>
-                                            </switch>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="z8y-eb-279"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -221,13 +221,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="selectedMaxNumberTF" destination="mVz-Xy-Yah" id="p70-g4-Q9N"/>
-                        <outlet property="selectedOriginalPhotoSwitch" destination="xkq-Rq-3oH" id="OHF-fa-G5Q"/>
-                        <outlet property="selectedPhotoSwitch" destination="dqu-2U-XqO" id="G7c-8r-PrY"/>
-                        <outlet property="selectedVideoSwitch" destination="Uj2-H9-SHe" id="hhj-16-kdV"/>
-                        <outlet property="showInsideTakePhotoSwitch" destination="8P2-HE-Cxb" id="rH8-WW-qFn"/>
-                        <outlet property="showRowNumberTF" destination="rgB-Xf-Xre" id="Jo6-pi-4DA"/>
-                        <outlet property="timeSortSwitch" destination="aFn-8J-x48" id="amp-zj-hUx"/>
+                        <outlet property="selectedMaxNumberTF" destination="mVz-Xy-Yah" id="l85-te-dpK"/>
+                        <outlet property="selectedOriginalPhotoSwitch" destination="xkq-Rq-3oH" id="2WB-17-e3y"/>
+                        <outlet property="selectedPhotoSwitch" destination="dqu-2U-XqO" id="y14-kl-su7"/>
+                        <outlet property="selectedVideoSwitch" destination="Uj2-H9-SHe" id="VLj-4R-lJm"/>
+                        <outlet property="showInsideTakePhotoSwitch" destination="8P2-HE-Cxb" id="jL9-Rs-A95"/>
+                        <outlet property="showRowNumberTF" destination="rgB-Xf-Xre" id="jaI-kr-5PH"/>
+                        <outlet property="timeSortSwitch" destination="aFn-8J-x48" id="sZ2-7C-ZpG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -15,7 +15,7 @@ internal enum LKOscillatoryAnimationType {
 }
 
 
-@objc protocol LKImagePickerControllerDelegate: class {
+@objc public protocol LKImagePickerControllerDelegate: class {
     
    @objc optional func imagePickerControllerDidFinish(_ picker:LKImagePickerController, _ photos:[UIImage], _ assets:[Any], _ isSelectOriginalPhoto:Bool)
     
@@ -23,10 +23,10 @@ internal enum LKOscillatoryAnimationType {
 }
 
 
-internal struct ImagePickerConfig {
+public struct ImagePickerConfig {
     
     /// 默认最大可选9张图片
-    var maxImagesCount = 9 {
+    public var maxImagesCount = 9 {
         didSet {
             if maxImagesCount > 1 {
                 showSelectBtn = true
@@ -35,17 +35,17 @@ internal struct ImagePickerConfig {
     }
     
     /// 最小图片必选张数，默认是0
-    var minImagesCount = 0
+    public var minImagesCount = 0
     
     /// 默认按修改时间升序，默认为true，如果设置为false，最新照片会显示在最前面，内部拍照按钮会排在第一个
-    var sortAscendingByModificationDate = true
+    public var sortAscendingByModificationDate = true
     
     /// 默认为true，如果设置为false，原图按钮将隐藏
-    var allowPickingOriginImage = true
+    public var allowPickingOriginImage = true
     
     // TODO: 暂时不支持播放视频，会尽快完善
     /// 默认为true，如果设置为false，将不能选择发送视频
-    var allowPickingVideo = true {
+    public var allowPickingVideo = true {
         didSet {
             if !allowPickingVideo {
                 allowPickingImage = true
@@ -54,7 +54,7 @@ internal struct ImagePickerConfig {
     }
     
     /// 默认为true，如果设置为false，将不能选择发送图片
-    var allowPickingImage = true {
+    public var allowPickingImage = true {
         didSet {
             if !allowPickingImage {
                 allowPickingVideo = true
@@ -63,28 +63,28 @@ internal struct ImagePickerConfig {
     }
     
     /// 默认为true，如果设置为false，将不能在选择器中拍照
-    var allowTakePicture = true
+    public var allowTakePicture = true
     
     // 默认为true，如果设置为false，预览按钮将隐藏，用户将不能取预览照片
-    var allowPreview = true
+    public var allowPreview = true
     
     /// 默认为false，如果设置true，会自动修正图片
-    var shouldFixOrientation = false
+    public var shouldFixOrientation = false
     
     /// 默认为true，图片展示列表自动滑动到底部
-    var shouldScrollToBottom = true
+    public var shouldScrollToBottom = true
     
     /// 默认为true，如果设置为false，选择器将不会自动dismiss
-    var autoDismiss = true
+    public var autoDismiss = true
     
     /// 默认828像素宽
-    var photoWidth: CGFloat = 828
+    public var photoWidth: CGFloat = 828
     
     /// 取图片超过15秒还没有成功时，会自动dis missHUD
-    var timeout:Int = 15
+    public var timeout:Int = 15
     
     /// collection list 一行显示的个数(2 <= columnNumber <= 6)，默认为4
-    var  columnNumber:Int = 4 {
+    public var  columnNumber:Int = 4 {
         didSet {
             if columnNumber <= 2 {
                 columnNumber = 2
@@ -95,7 +95,7 @@ internal struct ImagePickerConfig {
     }
     
     /// 在单选模式
-    var showSelectBtn = true {
+    public var showSelectBtn = true {
         didSet {
             // 多选模式下，不允许showSelectBtn为false
             if !showSelectBtn && maxImagesCount > 1 {
@@ -105,7 +105,7 @@ internal struct ImagePickerConfig {
     }
     
     
-    var pushPicturePickerVc = true
+    public var pushPicturePickerVc = true
     
 }
 
@@ -297,7 +297,15 @@ internal extension UIView {
 internal extension UIImage {
     
     class func imageNamedFromMyBundle(name:String) -> UIImage? {
-        let image = UIImage(named: "LKImagePicker.bundle/".appending(name))
+        var image = UIImage(named: "LKImagePicker.bundle/".appending(name))
+        
+        if image == nil {
+            image = UIImage(named: "Frameworks/LKImagePicker.framework/LKImagePicker.bundle/".appending(name))
+            if image == nil {
+                image = UIImage(named: name)
+            }
+        }
+        
         return image
     }
 }
@@ -309,10 +317,11 @@ internal extension Bundle {
     
     static var lk_imagePickerBundle:Bundle {
         if lkBundle == nil {
-            let path = Bundle.main.path(forResource: "LKImagePicker", ofType: "bundle")
+            var path = Bundle.main.path(forResource: "LKImagePicker", ofType: "bundle")
             if path == nil {
-                // TODO : 待完善
+                path = Bundle.main.path(forResource: "LKImagePicker", ofType: "bundle", inDirectory: "Frameworks/LKImagePicker.framework/")
             }
+            
             lkBundle = Bundle(path: path!)
         }
        return lkBundle!

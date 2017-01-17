@@ -21,7 +21,7 @@ class LKTestCell: UICollectionViewCell {
     
     lazy var deleteBtn: UIButton = { [unowned self] in
         let deleteBtn = UIButton(type: .custom)
-        deleteBtn.frame = CGRect(x: self.lk_width - 36, y: 0, width: 36, height: 36)
+        deleteBtn.frame = CGRect(x: self.frame.size.width - 36, y: 0, width: 36, height: 36)
         deleteBtn.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -10)
         deleteBtn.setImage(UIImage(named: "photo_delete"), for: .normal)
         deleteBtn.alpha = 0.6

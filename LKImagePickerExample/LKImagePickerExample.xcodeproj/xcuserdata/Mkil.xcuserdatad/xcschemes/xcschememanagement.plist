@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LKImagePicker.xcscheme</key>
+		<key>LKImagePickerExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E82BC0DE1E2E51AC009344AB</key>
+		<key>E82BC1151E2E5334009344AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E82BC0E71E2E51AC009344AB</key>
+		<key>E82BC1291E2E5334009344AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

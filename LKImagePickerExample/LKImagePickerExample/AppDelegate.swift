@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  LKImagePicker
+//  LKImagePickerExample
 //
-//  Created by Mkil on 19/12/2016.
-//  Copyright © 2016 黎宁康. All rights reserved.
+//  Created by Mkil on 17/01/2017.
+//  Copyright © 2017 Mkil. All rights reserved.
 //
 
 import UIKit

@@ -11,7 +11,7 @@ import Photos
 
 public class LKImagePickerController: UINavigationController {
     
-    var imageConfig = ImagePickerConfig()
+    public var imageConfig = ImagePickerConfig()
     var selectedModels:[LKAssetModel] = []
     var didFinishPickingPhotosHandle:(([UIImage], [Any], Bool) -> Void)?
     weak var pickerDelegate:LKImagePickerControllerDelegate?
@@ -69,7 +69,7 @@ public class LKImagePickerController: UINavigationController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    init(maxImagesCount: Int = 9, columnNumber: Int = 4, delegate: LKImagePickerControllerDelegate? = nil, _ pushPicturePickerVc: Bool = true, finishPickingPhotosHandle:(([UIImage], [Any], Bool) -> Void)? = nil) {
+    public init(maxImagesCount: Int = 9, columnNumber: Int = 4, delegate: LKImagePickerControllerDelegate? = nil, _ pushPicturePickerVc: Bool = true, finishPickingPhotosHandle:(([UIImage], [Any], Bool) -> Void)? = nil) {
         
         let rootVC = LKAlbumPickerController()
         super.init(rootViewController: rootVC)

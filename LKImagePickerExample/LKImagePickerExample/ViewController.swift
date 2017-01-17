@@ -8,8 +8,13 @@
 
 import UIKit
 import Photos
+import LKImagePicker
 
-class ViewController: UIViewController , UICollectionViewDelegate,UICollectionViewDataSource,LKImagePickerControllerDelegate {
+protocol delegate {
+    
+}
+
+class ViewController: UIViewController , UICollectionViewDelegate,UICollectionViewDataSource,LKImagePickerControllerDelegate{
 
     
     var photos:[UIImage] = []
@@ -37,12 +42,12 @@ class ViewController: UIViewController , UICollectionViewDelegate,UICollectionVi
     lazy var collectionView: UICollectionView = { [unowned self] in
         let layout = UICollectionViewFlowLayout()
         let margin:CGFloat = 4
-        let itemH = (self.view.lk_width - 2 * margin - 4) / 3 - margin
+        let itemH = (self.view.frame.size.width - 2 * margin - 4) / 3 - margin
         layout.itemSize = CGSize(width: itemH, height: itemH)
         layout.minimumInteritemSpacing = margin
         layout.minimumLineSpacing = margin
         
-        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 245 + 45, width: self.view.lk_width, height: self.view.lk_height - 245 - 45), collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: CGRect(x: 0, y: 245 + 45, width: self.view.frame.size.width, height: self.view.frame.size.height - 245 - 45), collectionViewLayout: layout)
         let rgb:CGFloat = 244 / 255.0
         
         collectionView.alwaysBounceVertical = true
@@ -173,6 +178,25 @@ class ViewController: UIViewController , UICollectionViewDelegate,UICollectionVi
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+}
+
+//MARK: - extension
+
+internal extension String {
+    var toFloat: Float {
+        let numberFormatter = NumberFormatter()
+        return numberFormatter.number(from: self)?.floatValue ?? 0
+    }
+    
+    var toDouble: Double {
+        let numberFormatter = NumberFormatter()
+        return numberFormatter.number(from: self)?.doubleValue ?? 0
+    }
+    
+    var toInt: Int {
+        let numberFormatter = NumberFormatter()
+        return numberFormatter.number(from: self)?.intValue ?? 0
     }
 }
 
